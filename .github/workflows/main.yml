@@ -1,0 +1,42 @@
+name: main
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['*']
+  workflow_dispatch:
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.19.1
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress
+        uses: cypress-io/github-action@v5.6.1
+        with:
+          start: npm run cypress:start
+          wait-on: 'http://localhost:3000'
+
+      - name: Run post tests
+        run: npm run posttest
+
+      - name: Report LCOV
+        uses: zgosalvez/github-actions-report-lcov@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverage-files: ./coverage/lcov.info
+
+      - name: Store coverage folder as artifact for deploy
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage

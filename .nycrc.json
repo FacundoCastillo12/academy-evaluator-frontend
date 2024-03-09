@@ -1,0 +1,15 @@
+{
+  "excludeAfterRemap": true,
+  "all": true,
+  "include": ["src/**"],
+  "exclude": [
+    "cypress/**",
+    "**/__fixtures__/**",
+    "**/__mocks__/**",
+    "**/__tests__/**",
+    "coverage/**",
+    "node_modules/**"
+  ],
+  "reporter": ["text-summary", "json", "lcov"],
+  "report-dir": "./coverage"
+}
