@@ -10,6 +10,12 @@
 /coverage
 /.nyc_output
 
+# cypress:
+/cypress/screenshots
+/cypress/videos
+.nyc_output
+
+
 # next.js
 /.next/
 /out/

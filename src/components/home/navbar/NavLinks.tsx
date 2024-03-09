@@ -10,7 +10,9 @@ const NavLinks = ({ links }: INavLinksProps) => {
     <>
       {links.map((link) => (
         <li key={link.to}>
-          <Link href={link.to}>{link.name}</Link>
+          <Link href={link.to} data-cy={link.name}>
+            {link.name}
+          </Link>
         </li>
       ))}
     </>

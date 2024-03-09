@@ -13,14 +13,14 @@ const Navbar = () => {
       to: '/',
     },
     {
-      name: 'Evalautor',
+      name: 'Evaluator',
       to: '/evaluator',
     },
   ];
   return (
     <header className="navbar bg-base-300">
       <div className="navbar-start">
-        <Link href="/" className="btn btn-ghost text-xl">
+        <Link href="/" className="btn btn-ghost text-xl" data-cy="title-navbar">
           Academy Evaluator
         </Link>
       </div>
