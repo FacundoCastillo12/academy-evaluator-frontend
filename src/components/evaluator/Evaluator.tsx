@@ -33,13 +33,18 @@ const Evaluator = ({ question, handleQuestionAnswer }: IEvaluatorProps) => {
                     className="radio"
                     name="answer"
                     value={answer.answer}
+                    data-cy={`${answer.answer}-answer`}
                   />
                 )}
                 <span className="label-text">{answer.answer}</span>
               </label>
             ))}
           </div>
-          <button type="submit" className="btn btn-primary mt-4">
+          <button
+            type="submit"
+            data-cy="submit-answer"
+            className="btn btn-primary mt-4"
+          >
             Submit
           </button>
         </Form>
