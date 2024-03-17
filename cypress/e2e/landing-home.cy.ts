@@ -21,6 +21,14 @@ describe('View every route', () => {
         .as('evaluator');
 
       cy.get('@evaluator').first().click();
+
+      cy.get('[data-cy="submit-answer"]').click();
+
+      cy.get('[data-cy="submit-answer"]').click();
+      cy.get('[data-cy="submit-answer"]').click();
+
+      cy.get('[data-cy="León-answer"]').click();
+      cy.get('[data-cy="submit-answer"]').click();
     });
   });
 });
