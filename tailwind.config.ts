@@ -48,6 +48,7 @@ const config: Config = {
           900: 'hsl(313,39%,23.1%)',
           950: 'hsl(312.4,39.5%,16.9%)',
         },
+        'base-400': '#1B1A47',
       },
       backgroundColor: {
         primary: {
@@ -89,6 +90,7 @@ const config: Config = {
           900: 'hsl(313,39%,23.1%)',
           950: 'hsl(312.4,39.5%,16.9%)',
         },
+        'base-400': '#1B1A47',
       },
       textColor: {
         primary: {
@@ -130,6 +132,7 @@ const config: Config = {
           900: 'hsl(313,39%,23.1%)',
           950: 'hsl(312.4,39.5%,16.9%)',
         },
+        'base-400': '#1B1A47',
       },
     },
   },
@@ -147,6 +150,7 @@ const config: Config = {
           'base-100': '#312E81',
           'base-200': '#29276D',
           'base-300': '#24225E',
+          'base-400': '#1B1A47',
           neutral: 'hsl(233.8,47.1%,55%)',
           'base-content': 'hsl(240,48.6%,95.1%)',
         },

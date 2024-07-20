@@ -7,7 +7,7 @@ const FAQItem = ({
   question: string;
   answer: string;
 }) => (
-  <div className="collapse collapse-plus bg-base-200 mb-4">
+  <div className="collapse collapse-plus bg-base-300 mb-4">
     <input type="radio" name="my-accordion-3" />
     <div className="collapse-title text-xl font-medium">{question}</div>
     <div className="collapse-content">
@@ -52,7 +52,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-base-100">
+    <section className="py-16 bg-gradient-to-t from-base-300 to-base-100 w-full">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-2 text-primary">
           FAQs

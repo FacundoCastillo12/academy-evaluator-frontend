@@ -9,7 +9,7 @@ const StatItem = ({ value, label }: { value: string; label: string }) => (
 
 const StatsSection = () => {
   return (
-    <section className="bg-purple-800 text-white py-16 w-full">
+    <section className="bg-gradient-to-t from-base-100 to-base-300 text-white py-16 w-full">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">
           Over 1000 Institutions Trust Us
