@@ -18,7 +18,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <header className="navbar bg-base-300">
+    <header className="navbar bg-base-300 z-50">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost text-xl" data-cy="title-navbar">
           Academy Evaluator
@@ -48,7 +48,7 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <ul className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36">
+          <ul className="menu menu-md dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-36">
             <NavLinks links={links} />
           </ul>
         </div>
