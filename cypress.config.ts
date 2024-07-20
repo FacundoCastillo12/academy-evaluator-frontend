@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import codeCoverageTask from '@cypress/code-coverage/task';
 
 export default defineConfig({
   component: {
@@ -6,15 +7,15 @@ export default defineConfig({
       framework: 'next',
       bundler: 'webpack',
     },
-    setupNodeEvents: (on, config) => {
-      require('@cypress/code-coverage/task')(on, config);
+    setupNodeEvents(on, config) {
+      codeCoverageTask(on, config);
       return config;
     },
   },
   e2e: {
     baseUrl: 'http://localhost:3000',
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config);
+      codeCoverageTask(on, config);
       return config;
     },
     env: {
