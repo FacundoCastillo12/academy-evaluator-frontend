@@ -28,11 +28,9 @@ const LandingSection = () => {
     <section className="relative min-h-screen w-full overflow-hidden">
       <Image
         src={backgroundImage}
-        layout="fill"
-        objectFit="cover"
         quality={100}
         alt="Background"
-        className="opacity-70"
+        className="opacity-70 absolute top-[-1px] object-cover"
       />
       <div className="absolute inset-0 opacity-70" />
       <div className="relative z-10 min-h-screen w-full flex items-center justify-center">
@@ -42,7 +40,7 @@ const LandingSection = () => {
             <p className="text-xl mb-8">
               A simple and efficient way to evaluate your students.
             </p>
-            <Link className="btn btn-primary btn-lg" href="/evaluator">
+            <Link className="btn btn-primary btn-lg" href="/evaluations">
               Get started
             </Link>
           </div>
