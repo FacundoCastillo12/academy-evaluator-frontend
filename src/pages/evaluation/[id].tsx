@@ -1,4 +1,4 @@
-import EvaluatorEngine from '@/components/evaluator/EvaluatorPage';
+import EvaluatorEngine from '@/components/evaluator/EvaluatorEngine';
 import { useRouter } from 'next/router';
 
 const EvaluationPage = () => {
