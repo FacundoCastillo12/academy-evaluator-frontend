@@ -1,16 +1,23 @@
 import React from 'react';
 
-const FAQItem = ({
-  question,
-  answer,
-}: {
+type FAQItemProps = React.HTMLAttributes<HTMLDivElement> & {
   question: string;
   answer: string;
-}) => (
-  <div className="collapse collapse-plus bg-base-300 mb-4">
+};
+
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer, ...rest }) => (
+  <div
+    className={`collapse collapse-plus bg-base-300 mb-4 ${rest.className}`}
+    {...rest}
+  >
     <input type="radio" name="my-accordion-3" />
-    <div className="collapse-title text-xl font-medium">{question}</div>
-    <div className="collapse-content">
+    <div
+      className="collapse-title text-xl font-medium"
+      data-cy={`faq-${question}`}
+    >
+      {question}
+    </div>
+    <div className="collapse-content" data-cy={`faq-answer-${question}`}>
       <p>{answer}</p>
     </div>
   </div>
@@ -52,21 +59,35 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-t from-base-300 to-base-100 w-full">
+    <section
+      className="py-16 bg-gradient-to-t from-base-300 to-base-100 w-full"
+      data-cy="faq-section"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-2 text-primary">
+        <h2
+          className="text-3xl font-bold text-center mb-2 text-primary"
+          data-cy="faq-title"
+        >
           FAQs
         </h2>
         <h3 className="text-4xl font-bold text-center mb-4">
           You have <span className="text-primary">Questions</span>?
         </h3>
-        <p className="text-center text-base-content mb-12 max-w-2xl mx-auto">
+        <p
+          className="text-center text-base-content mb-12 max-w-2xl mx-auto"
+          data-cy="faq-description"
+        >
           We&apos;ve got answers to all of them. If you don&apos;t find what
           you&apos;re looking for, feel free to contact our support team.
         </p>
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              data-cy={`faq-item-${index}`}
+            />
           ))}
         </div>
       </div>
