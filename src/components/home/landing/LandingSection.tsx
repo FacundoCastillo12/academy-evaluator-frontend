@@ -28,7 +28,7 @@ const LandingSection = () => {
     <section className="relative min-h-screen w-full overflow-hidden">
       <Image
         src={backgroundImage}
-        quality={1}
+        quality={100}
         alt="Background"
         className="opacity-70 absolute top-[-1px] object-cover"
       />
