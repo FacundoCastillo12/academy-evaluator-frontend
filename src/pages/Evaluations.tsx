@@ -2,13 +2,13 @@ import EvaluationCard from '@/components/evaluator/EvaluationCard';
 import MainLayout from '@/components/layout/MainLayout';
 import { mockEvaluations } from '@/data/evaluations';
 import { IEvaluation } from '@/interfaces/IEvaluation';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const Evaluations = () => {
+export default function Evaluations() {
   const [evaluations, setEvaluations] = useState<IEvaluation[]>([]);
 
   useEffect(() => {
-    // In a real application, this would be an API call
+    // This need to be replaced with an API call
     setEvaluations(mockEvaluations);
   }, []);
 
@@ -24,6 +24,4 @@ const Evaluations = () => {
       </div>
     </MainLayout>
   );
-};
-
-export default Evaluations;
+}
