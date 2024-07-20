@@ -1,4 +1,5 @@
 export interface IEvaluation {
+  id: number;
   subject: string;
   questions: IQuestions[];
 }

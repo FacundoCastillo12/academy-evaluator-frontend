@@ -13,8 +13,8 @@ const Navbar = () => {
       to: '/',
     },
     {
-      name: 'Evaluator',
-      to: '/evaluator',
+      name: 'Evaluations',
+      to: '/Evaluations',
     },
   ];
   return (
