@@ -9,7 +9,7 @@ interface EvaluationCardProps {
 const EvaluationCard: React.FC<EvaluationCardProps> = ({ evaluation }) => {
   return (
     <div
-      className="card w-96 bg-base-300 shadow-xl"
+      className="card max-h-80 bg-base-300 shadow-xl"
       data-cy={`evaluation-${evaluation.id}`}
     >
       <div className="card-body">
