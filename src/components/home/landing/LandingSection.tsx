@@ -28,11 +28,9 @@ const LandingSection = () => {
     <section className="relative min-h-screen w-full overflow-hidden">
       <Image
         src={backgroundImage}
-        quality={100}
+        quality={1}
         alt="Background"
         className="opacity-70 absolute top-[-1px] object-cover"
-        layout="fill"
-        objectFit="cover"
       />
       <div className="absolute inset-0 opacity-70" />
       <div className="relative z-10 min-h-screen w-full flex items-center justify-center">
