@@ -42,7 +42,7 @@ const LandingSection = () => {
             <p className="text-xl mb-8">
               A simple and efficient way to evaluate your students.
             </p>
-            <Link className="btn btn-primary btn-lg" href="/evaluator">
+            <Link className="btn btn-primary btn-lg" href="/evaluations">
               Get started
             </Link>
           </div>
