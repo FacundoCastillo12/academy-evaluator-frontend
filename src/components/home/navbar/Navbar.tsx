@@ -14,7 +14,7 @@ const Navbar = () => {
     },
     {
       name: 'Evaluations',
-      to: '/Evaluations',
+      to: '/evaluations',
     },
   ];
   return (

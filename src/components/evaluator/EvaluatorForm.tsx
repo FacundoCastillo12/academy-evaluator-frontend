@@ -19,7 +19,9 @@ const EvaluatorForm = ({ question, handleQuestionAnswer }: IEvaluatorProps) => {
     <Formik initialValues={{ answer: '' }} onSubmit={handleSubmit}>
       <Form className="form-control">
         <div className="space-y-2">
-          <p className="font-bold text-center">{question.question}</p>
+          <p className="font-bold text-center" data-cy="question">
+            {question.question}
+          </p>
           {question.answers.map((answer, index) => (
             <label key={index} className="label cursor-pointer">
               <Field

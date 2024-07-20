@@ -65,7 +65,7 @@ const EvaluatorEngine: React.FC<EvaluatorPageProps> = ({ evaluationId }) => {
         {!isEvaluationComplete ? (
           <div className="flex flex-col bg-secondary rounded-lg shadow-xl shadow-accent p-4 w-96 h-full bg-base-200">
             <div>
-              <h4 className="text-lg font-bold text-center">
+              <h4 className="text-lg font-bold text-center" data-cy="subject">
                 {evaluation.subject}
               </h4>
               <p className="text-center">
@@ -82,6 +82,7 @@ const EvaluatorEngine: React.FC<EvaluatorPageProps> = ({ evaluationId }) => {
                 onClick={handlePreviousQuestion}
                 disabled={currentQuestionIndex === 0}
                 className="btn btn-secondary"
+                data-cy="previous-question"
               >
                 Previous
               </button>
@@ -91,6 +92,7 @@ const EvaluatorEngine: React.FC<EvaluatorPageProps> = ({ evaluationId }) => {
                   currentQuestionIndex === evaluation.questions.length - 1
                 }
                 className="btn btn-secondary"
+                data-cy="next-question"
               >
                 Next
               </button>

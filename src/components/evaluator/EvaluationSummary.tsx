@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IEvaluation, IQuestions } from '@/interfaces/IEvaluation';
+import Link from 'next/link';
 
 interface EvaluationSummaryProps {
   evaluation: IEvaluation;
@@ -48,11 +49,14 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
   };
 
   return (
-    <div className="bg-secondary rounded-lg shadow-xl shadow-accent p-4 w-full max-w-2xl bg-base-200 py-2">
+    <div
+      className="bg-secondary rounded-lg shadow-xl shadow-accent p-4 w-full max-w-2xl bg-base-200 py-2"
+      data-cy="evaluation-summary"
+    >
       <h2 className="text-2xl font-bold text-center mb-4">
         Evaluation Summary
       </h2>
-      <p className="text-lg text-center mb-4">
+      <p className="text-lg text-center mb-4" data-cy="evaluation-summary-text">
         You got {correctAnswers.length} out of {evaluation.questions.length}{' '}
         questions correct.
       </p>
@@ -64,7 +68,7 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
 
           return (
             <div
-              key={index}
+              key={`${q.question}-${index}`}
               className={`p-3 rounded ${isCorrect ? 'bg-success/20' : 'bg-error/20'}`}
             >
               <div className="flex justify-between items-center">
@@ -72,6 +76,7 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
                 <button
                   onClick={() => toggleQuestionDetails(index)}
                   className="btn btn-sm btn-ghost"
+                  data-cy={`show-details-${q.question}`}
                 >
                   {expandedQuestions.includes(index)
                     ? 'Hide Details'
@@ -81,7 +86,10 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
 
               {expandedQuestions.includes(index) && (
                 <div className="mt-2 space-y-2">
-                  <p className={isCorrect ? 'text-success' : 'text-error'}>
+                  <p
+                    className={isCorrect ? 'text-success' : 'text-error'}
+                    data-cy={`answer-${q.question}-${isCorrect}`}
+                  >
                     Your answer: {userAnswer}
                   </p>
                   {!isCorrect && (
@@ -124,6 +132,13 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
           );
         })}
       </div>
+      <Link
+        className="btn btn-secondary text-white flex justify-center items-center mt-4"
+        href="/evaluations"
+        data-cy="go-evaluations"
+      >
+        Go Evaluations
+      </Link>
     </div>
   );
 };
