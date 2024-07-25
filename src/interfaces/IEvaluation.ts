@@ -1,15 +1,15 @@
 export interface IEvaluation {
   id: number;
   subject: string;
-  questions: IQuestions[];
+  questions: IQuestion[];
 }
 
 export interface IAnswer {
-  answer: string;
+  text: string;
   isCorrect: boolean;
 }
-export interface IQuestions {
-  question: string;
+export interface IQuestion {
+  text: string;
   isMultipleOption: boolean;
   answers: IAnswer[];
 }
