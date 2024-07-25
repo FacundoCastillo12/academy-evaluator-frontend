@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import EvaluatorForm from '@/components/evaluator/EvaluatorForm';
-import EvaluationSummary from '@/components/evaluator/EvaluationSummary';
 import MainLayout from '@/components/layout/MainLayout';
 import { IEvaluation } from '@/interfaces/IEvaluation';
 import { ToastNotify } from '@/utils/Toast';
 import { mockEvaluations } from '@/data/evaluations';
+import EvaluationSummary from './summary/EvaluationSummary';
+import EvaluatorForm from './form/EvaluatorForm';
 
 interface EvaluatorPageProps {
   evaluationId: string;
