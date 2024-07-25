@@ -11,7 +11,7 @@ const EvaluatorForm = ({ question, handleQuestionAnswer }: IEvaluatorProps) => {
     const answer = Array.isArray(values.answer)
       ? values.answer.join(',')
       : values.answer;
-    handleQuestionAnswer(question.question, answer);
+    handleQuestionAnswer(question.text, answer);
   };
 
   return (
@@ -19,7 +19,7 @@ const EvaluatorForm = ({ question, handleQuestionAnswer }: IEvaluatorProps) => {
       <Form className="form-control">
         <div className="space-y-2">
           <p className="font-bold text-center" data-cy="question">
-            {question.question}
+            {question.text}
           </p>
           {question.answers.map((answer) => (
             <label key={answer.text} className="label cursor-pointer">

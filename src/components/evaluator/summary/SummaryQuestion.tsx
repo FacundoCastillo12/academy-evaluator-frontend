@@ -27,8 +27,8 @@ const SummaryQuestion = ({
 
   return (
     <QuestionItem
-      key={`${question.question}-${index}`}
-      question={question.question}
+      key={`${question.text}-${index}`}
+      question={question.text}
       isCorrect={isCorrect}
       index={index}
       toggleQuestionDetails={toggleQuestionDetails}

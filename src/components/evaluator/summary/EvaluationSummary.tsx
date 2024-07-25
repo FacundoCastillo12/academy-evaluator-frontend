@@ -61,7 +61,7 @@ const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
         {evaluation.questions.map((q, index) => (
           <SummaryQuestion
             evaluateAnswer={evaluateAnswer}
-            key={q.question}
+            key={q.text}
             expandedQuestions={expandedQuestions}
             index={index}
             question={q}

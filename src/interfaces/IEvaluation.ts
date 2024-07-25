@@ -9,7 +9,7 @@ export interface IAnswer {
   isCorrect: boolean;
 }
 export interface IQuestion {
-  question: string;
+  text: string;
   isMultipleOption: boolean;
   answers: IAnswer[];
 }

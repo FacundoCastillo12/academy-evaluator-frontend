@@ -15,7 +15,7 @@ const AnswerDetails = ({
     <div className="mt-2 space-y-2">
       <p
         className={isCorrect ? 'text-success' : 'text-error'}
-        data-cy={`answer-${question}-${isCorrect}`}
+        data-cy={`answer-${question.text}-${isCorrect}`}
       >
         Your answer: {userAnswer}
       </p>

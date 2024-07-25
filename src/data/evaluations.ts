@@ -6,7 +6,7 @@ export const mockEvaluations: IEvaluation[] = [
     subject: 'Mathematics',
     questions: [
       {
-        question: 'What is the value of Pi to two decimal places?',
+        text: 'What is the value of Pi to two decimal places?',
         isMultipleOption: false,
         answers: [
           { text: '3.14', isCorrect: true },
@@ -14,7 +14,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the square root of 64?',
+        text: 'What is the square root of 64?',
         isMultipleOption: false,
         answers: [
           { text: '8', isCorrect: true },
@@ -22,7 +22,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Which of the following is a prime number?',
+        text: 'Which of the following is a prime number?',
         isMultipleOption: true,
         answers: [
           { text: '12', isCorrect: false },
@@ -32,7 +32,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the solution to the equation 3x + 2 = 11?',
+        text: 'What is the solution to the equation 3x + 2 = 11?',
         isMultipleOption: false,
         answers: [
           { text: '3', isCorrect: true },
@@ -40,7 +40,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Which of the following is the derivative of sin(x)?',
+        text: 'Which of the following is the derivative of sin(x)?',
         isMultipleOption: true,
         answers: [
           { text: 'cos(x)', isCorrect: true },
@@ -50,7 +50,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the sum of the interior angles of a triangle?',
+        text: 'What is the sum of the interior angles of a triangle?',
         isMultipleOption: false,
         answers: [
           { text: '180 degrees', isCorrect: true },
@@ -58,7 +58,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Solve for x: 5x - 20 = 0',
+        text: 'Solve for x: 5x - 20 = 0',
         isMultipleOption: false,
         answers: [
           { text: '4', isCorrect: true },
@@ -66,7 +66,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is 15% of 200?',
+        text: 'What is 15% of 200?',
         isMultipleOption: false,
         answers: [
           { text: '30', isCorrect: true },
@@ -74,7 +74,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the area of a circle with radius 7?',
+        text: 'What is the area of a circle with radius 7?',
         isMultipleOption: true,
         answers: [
           { text: '154', isCorrect: true },
@@ -84,7 +84,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the next number in the sequence: 2, 4, 6, 8, ...?',
+        text: 'What is the next number in the sequence: 2, 4, 6, 8, ...?',
         isMultipleOption: false,
         answers: [
           { text: '10', isCorrect: true },
@@ -92,7 +92,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What is the Pythagorean theorem?',
+        text: 'What is the Pythagorean theorem?',
         isMultipleOption: true,
         answers: [
           { text: 'a^2 + b^2 = c^2', isCorrect: true },
@@ -108,7 +108,7 @@ export const mockEvaluations: IEvaluation[] = [
     subject: 'Science',
     questions: [
       {
-        question: 'What planet is known as the Red Planet?',
+        text: 'What planet is known as the Red Planet?',
         isMultipleOption: false,
         answers: [
           { text: 'Mars', isCorrect: true },
@@ -116,7 +116,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Which of these are mammals?',
+        text: 'Which of these are mammals?',
         isMultipleOption: true,
         answers: [
           { text: 'Dog', isCorrect: true },
@@ -132,7 +132,7 @@ export const mockEvaluations: IEvaluation[] = [
     subject: 'History',
     questions: [
       {
-        question: 'Who was the first President of the United States?',
+        text: 'Who was the first President of the United States?',
         isMultipleOption: false,
         answers: [
           { text: 'George Washington', isCorrect: true },
@@ -142,7 +142,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'In what year did World War II end?',
+        text: 'In what year did World War II end?',
         isMultipleOption: false,
         answers: [
           { text: '1945', isCorrect: true },
@@ -152,8 +152,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question:
-          'Which empire was known as the "Empire on which the sun never sets"?',
+        text: 'Which empire was known as the "Empire on which the sun never sets"?',
         isMultipleOption: false,
         answers: [
           { text: 'British Empire', isCorrect: true },
@@ -163,7 +162,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What was the main cause of the American Civil War?',
+        text: 'What was the main cause of the American Civil War?',
         isMultipleOption: true,
         answers: [
           { text: 'Slavery', isCorrect: true },
@@ -173,7 +172,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Who discovered America in 1492?',
+        text: 'Who discovered America in 1492?',
         isMultipleOption: true,
         answers: [
           { text: 'Christopher Columbus', isCorrect: true },
@@ -183,7 +182,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'What ancient civilization built the Machu Picchu?',
+        text: 'What ancient civilization built the Machu Picchu?',
         isMultipleOption: true,
         answers: [
           { text: 'Inca', isCorrect: true },
@@ -193,7 +192,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'In what year did the French Revolution begin?',
+        text: 'In what year did the French Revolution begin?',
         isMultipleOption: true,
         answers: [
           { text: '1789', isCorrect: true },
@@ -203,8 +202,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question:
-          'Who was the British Prime Minister during most of World War II?',
+        text: 'Who was the British Prime Minister during most of World War II?',
         isMultipleOption: false,
         answers: [
           { text: 'Winston Churchill', isCorrect: true },
@@ -214,8 +212,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question:
-          'Which war was fought between the North and South regions in the United States?',
+        text: 'Which war was fought between the North and South regions in the United States?',
         isMultipleOption: false,
         answers: [
           { text: 'The American Civil War', isCorrect: true },
@@ -225,8 +222,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question:
-          'What was the name of the ship that brought the Pilgrims to America in 1620?',
+        text: 'What was the name of the ship that brought the Pilgrims to America in 1620?',
         isMultipleOption: true,
         answers: [
           { text: 'Mayflower', isCorrect: true },
@@ -242,7 +238,7 @@ export const mockEvaluations: IEvaluation[] = [
     subject: 'Geography',
     questions: [
       {
-        question: 'What is the capital of France?',
+        text: 'What is the capital of France?',
         isMultipleOption: false,
         answers: [
           { text: 'Paris', isCorrect: true },
@@ -250,7 +246,7 @@ export const mockEvaluations: IEvaluation[] = [
         ],
       },
       {
-        question: 'Which of these are countries in Africa?',
+        text: 'Which of these are countries in Africa?',
         isMultipleOption: true,
         answers: [
           { text: 'Nigeria', isCorrect: true },
